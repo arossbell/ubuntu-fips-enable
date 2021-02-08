@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+# See associated repository,
+#  https://github.com/arossbell/ubuntu-fips-enable,
+#  and license file (MIT).
+# This script itself is not supported by Canonical.
+# Developed from the official documentation at
+#  https://security-certs.docs.ubuntu.com/en/fips
+
 import argparse as ap
 import lsb_release
 import os
@@ -99,7 +107,7 @@ def install_fips_packages(codename):
    if codename == "xenial":
       os.system("apt install -y openssh-client openssh-client-hmac openssh-server openssh-server-hmac openssl libssl1.0.0 libssl1.0.0-hmac fips-initramfs linux-fips strongswan strongswan-hmac")
    if codename == "bionic":
-      os.system("apt install -y openssh-client openssh-client-hmac openssh-server openssh-server-hmac openssl libssl1.1 libssl1.1-hmac fips-initramfs linux-fips strongswan strongswan-hmac")
+      os.system("apt install -y ubuntu-fips openssh-client openssh-client-hmac openssh-server openssh-server-hmac strongswan strongswan-hmac")
 
 def get_boot_dev():
    print("Determining boot device.")
