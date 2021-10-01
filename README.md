@@ -1,4 +1,7 @@
 # Python Script to Enable FIPS on Ubuntu
+
+**This repository has been archived. Please use the [new official UA tool method](https://ubuntu.com/security/certifications/docs/fips) instead.**
+
 This script does the common installation of FIPS on Ubuntu.
 
 `script.py -u <LAUNCHPAD ID> -p <FIPS PPA PASSWORD>`
